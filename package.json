@@ -1,0 +1,35 @@
+{
+  "name": "anywherePlus",
+  "version": "1.0.0",
+  "description": "Run static file server anywhere",
+  "bin": {
+    "anywhere": "./bin/anywherePlus"
+  },
+  "keywords": [
+    "Static",
+    "file",
+    "server",
+	"Assets",
+	"POST"
+  ],
+  "author": "RaindropSaber",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "connect-history-api-fallback": "^1.2.0",
+    "debug": "^2.2.0",
+    "http-proxy-middleware": "^0.19.1",
+    "minimist": "^1.2.0",
+    "serve-index": "^1.9.1",
+    "serve-static": "^1.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaindropSaber/anywherePlus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RaindropSaber/anywherePlus.git/issues"
+  },
+  "homepage": "https://github.com/RaindropSaber/anywherePlus",
+  "files": ["bin", "keys"]
+}
