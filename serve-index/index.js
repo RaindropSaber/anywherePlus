@@ -109,7 +109,6 @@ async function upLoad(req,res,path){
 			let num=0;
 
 			req.on("data",function(chunk){
-				console.log(chunk)
 				chunks.push(chunk);
 				num+=chunk.length;
 			});
@@ -130,7 +129,6 @@ async function upLoad(req,res,path){
 				}//for
 				//获取上传图片信息
 				let picmsg_1 = buffer.slice(rems[0]+2,rems[1]).toString();
-				console.log(picmsg_1);
 
 				if(parseUrl(req).parse(req.url, true).query.method==='pasteText'){
 					pasteText = JSON.parse(picmsg_1).pasteText
@@ -138,7 +136,6 @@ async function upLoad(req,res,path){
 					return
 				}
 				let filename = picmsg_1.match(/filename=".*"/g)[0].split('"')[1];
-				console.log(filename);
 
 				//图片数据
 				var nbuf = buffer.slice(rems[3]+2,rems[rems.length-2]);
@@ -147,15 +144,12 @@ async function upLoad(req,res,path){
 				fs.writeFile(address,nbuf,function(err){
 					if (err) {
 						j(false)
-						console.log(err);
 					}else{
 						fs.readFile(address, 'utf-8', function(err, data) {
 							if (err) {
 								j(false)
-								console.log(err)
 							}
 							r(true)
-							console.log("创建成功")
 						});
 					}
 				})
@@ -206,7 +200,6 @@ return function (req, res, next) {
     // check if we have a directory
     debug('stat "%s"', path);
     fs.stat(path, async function(err, stat){
-		console.log(path,stat)
 		if (err && err.code === 'ENOENT') {
 			return next();
 		}
@@ -229,7 +222,6 @@ return function (req, res, next) {
 		// var r = url.query.substr(1).match(reg);
 		url.parse(req.url, true).query
 		// console.log('------请求参数',url)
-		console.log('------请求参数',url.parse(req.url, true).query)
 		fs.readdir(path, function(err, files){
 			if (err) return next(err);
 			if (!hidden) files = removeHidden(files);

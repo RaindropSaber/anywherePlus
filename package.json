@@ -1,9 +1,9 @@
 {
-  "name": "anywherePlus",
-  "version": "1.0.0",
+  "name": "anywhere-plus",
+  "version": "1.1.0",
   "description": "Run static file server anywhere",
   "bin": {
-    "anywhere": "./bin/anywherePlus"
+    "anywherePlus": "./bin/anywherePlus"
   },
   "keywords": [
     "Static",
@@ -31,5 +31,5 @@
     "url": "https://github.com/RaindropSaber/anywherePlus.git/issues"
   },
   "homepage": "https://github.com/RaindropSaber/anywherePlus",
-  "files": ["bin", "keys"]
+  "files": ["bin", "keys","serve-index"]
 }
