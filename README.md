@@ -8,7 +8,7 @@ Running static file server anywherePlus. 随时随地将你的当前目录变成
 Install it as a command line tool via `npm -g`.
 
 ```sh
-npm install anywherePlus-plus -g
+npm install anywhere-plus -g
 ```
 
 ## Execution
