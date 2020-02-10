@@ -1,53 +1,53 @@
-Anywhere 随启随用的静态文件服务器
+AnywherePlus 随启随用的可上传静态文件服务器
 ==============================
 
-Running static file server anywhere. 随时随地将你的当前目录变成一个静态文件服务器的根目录。
+Running static file server anywherePlus. 随时随地将你的当前目录变成一个静态文件服务器的根目录。
 
 ## Installation
 
 Install it as a command line tool via `npm -g`.
 
 ```sh
-npm install anywhere -g
+npm install anywherePlus-plus -g
 ```
 
 ## Execution
 
 ```sh
-$ anywhere
+$ anywherePlus
 // or with port
-$ anywhere -p 8000
+$ anywherePlus -p 8000
 // or start it but silent(don't open browser)
-$ anywhere -s
+$ anywherePlus -s
 // or with hostname
-$ anywhere -h localhost -p 8888
+$ anywherePlus -h localhost -p 8888
 // or with folder
-$ anywhere -d ~/git/anywhere
+$ anywherePlus -d ~/git/anywherePlus
 // or enable html5 history
-$ anywhere -f /index.html
+$ anywherePlus -f /index.html
 ```
 
 ## Help
 
 ```sh
-$ anywhere --help
+$ anywherePlus --help
 Usage:
-  anywhere --help // print help information
-  anywhere // 8000 as default port, current folder as root
-  anywhere 8888 // 8888 as port
-  anywhere -p 8989 // 8989 as port
-  anywhere -s // don't open browser
-  anywhere -h localhost // localhost as hostname
-  anywhere -d /home // /home as root
-  anywhere -f /index.html  // Enable html5 history,the index is /index.html
-  anywhere --proxy http://localhost:7000/api // Support shorthand URL, webpack.config.js or customize config file
+  anywherePlus --help // print help information
+  anywherePlus // 8000 as default port, current folder as root
+  anywherePlus 8888 // 8888 as port
+  anywherePlus -p 8989 // 8989 as port
+  anywherePlus -s // don't open browser
+  anywherePlus -h localhost // localhost as hostname
+  anywherePlus -d /home // /home as root
+  anywherePlus -f /index.html  // Enable html5 history,the index is /index.html
+  anywherePlus --proxy http://localhost:7000/api // Support shorthand URL, webpack.config.js or customize config file
 ```
 
 #### Proxy argvs
 
 **Shorthand URL**
 ```
-anywhere --proxy http://localhost:7000/api
+anywherePlus --proxy http://localhost:7000/api
                  \___________________/\___/
                               |         |
                            target    context
